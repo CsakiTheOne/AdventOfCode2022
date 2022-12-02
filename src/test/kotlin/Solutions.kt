@@ -10,7 +10,7 @@ class Solutions {
     }
 
     @Test
-    fun day01p2test() {
+    fun day01test2() {
         val ans = day01p2(IO.getInputLines(1))
         println(ans)
         assert(ans == 206289)
@@ -24,7 +24,7 @@ class Solutions {
     }
 
     @Test
-    fun day02p2test() {
+    fun day02test2() {
         val ans = day02p2(IO.getInputLines(2))
         println(ans)
         assert(ans == 14470)
