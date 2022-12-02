@@ -26,11 +26,14 @@ fun decideResult(line: String): Int {
             Shape.values().first { c[0] == it.sign || c[0] == it.signSelf }
         }
 
-    return when ((shapes.first().score - shapes.last().score) % 3) {
+    val resultScore = when (Math.floorMod(shapes.first().score - shapes.last().score, 3)) {
         2 -> 6
         0 -> 3
-        else -> 0
+        1 -> 0
+        else -> -1
     }
+
+    return resultScore
 }
 
 fun day02(input: List<String>): Int {
