@@ -2,7 +2,7 @@ package days
 
 enum class Shape(
     val sign: Char,
-    val signSelf: Char,
+    val signPart1: Char,
     val score: Int,
 ) {
     ROCK('A', 'X', 1),
@@ -23,7 +23,7 @@ fun decideResult(line: String): Int {
     val shapes = line
         .split(' ')
         .map { c ->
-            Shape.values().first { c[0] == it.sign || c[0] == it.signSelf }
+            Shape.values().first { c[0] == it.sign || c[0] == it.signPart1 }
         }
 
     val resultScore = when (Math.floorMod(shapes.first().score - shapes.last().score, 3)) {
@@ -38,7 +38,7 @@ fun decideResult(line: String): Int {
 
 fun day02(input: List<String>): Int {
     return input.sumOf { line ->
-        decideResult(line) + Shape.values().first { shape -> shape.signSelf == line.last() }.score
+        decideResult(line) + Shape.values().first { shape -> shape.signPart1 == line.last() }.score
     }
 }
 
