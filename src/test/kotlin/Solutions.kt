@@ -29,4 +29,15 @@ class Solutions {
         println(ans)
         assert(ans == 14470)
     }
+
+    @Test
+    fun day03test() {
+        val ans = day03(IO.getInputLines(3))
+        println(ans)
+    }
+
+    @Test
+    fun day03test2() {
+
+    }
 }
