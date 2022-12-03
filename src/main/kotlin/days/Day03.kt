@@ -23,6 +23,15 @@ fun day03(input: List<String>): Int {
     return allWrongItems.map { it.getPriority() }.sum()
 }
 
-fun day03p2(input: List<String>) {
+fun day03p2(input: List<String>): Int {
+    val groups = input.chunked(3)
+    var badges = ""
 
+    groups.forEach { group ->
+        badges += group.first().first { badge ->
+            group[1].contains(badge) && group[2].contains(badge)
+        }
+    }
+
+    return badges.sumOf { it.getPriority() }
 }

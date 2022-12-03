@@ -34,10 +34,13 @@ class Solutions {
     fun day03test() {
         val ans = day03(IO.getInputLines(3))
         println(ans)
+        assert (ans == 7674)
     }
 
     @Test
     fun day03test2() {
-
+        val ans = day03p2(IO.getInputLines(3))
+        println(ans)
+        assert(ans == 2805)
     }
 }
