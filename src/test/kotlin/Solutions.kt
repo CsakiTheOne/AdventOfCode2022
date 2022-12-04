@@ -46,13 +46,15 @@ class Solutions {
 
     @Test
     fun day04test() {
-        val ans = Day04.part1(IO.getInputLines(3))
+        val ans = Day04.part1(IO.getInputLines(4))
         println(ans)
+        assert(ans == 496)
     }
 
     @Test
     fun day04test2() {
-        val ans = Day04.part2(IO.getInputLines(3))
+        val ans = Day04.part2(IO.getInputLines(4))
         println(ans)
+        assert(ans == 847)
     }
 }
