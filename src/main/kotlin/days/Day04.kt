@@ -1,11 +1,9 @@
 package days
 
+import includes
+
 class Day04 {
     companion object {
-
-        private fun ClosedRange<Int>.includes(other: ClosedRange<Int>): Boolean {
-            return contains(other.start) && contains(other.endInclusive)
-        }
 
         fun part1(input: List<String>): Int {
             return input.count { line ->

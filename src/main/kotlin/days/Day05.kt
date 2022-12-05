@@ -1,23 +1,11 @@
 package days
 
-import days.Day05.Companion.columns
-import days.Day05.Companion.words
+import columns
+import words
 import java.util.Stack
 
 class Day05 {
     companion object {
-
-        fun String.columns(): List<String> {
-            val columns = mutableListOf<String>()
-            for (i in 0 until lines().maxOf { it.length }) {
-                columns.add(lines().map { it.getOrNull(i) ?: "" }.joinToString(""))
-            }
-            return columns
-        }
-
-        fun String.words(): List<String> {
-            return split(" ")
-        }
 
         fun part1(input: String): String {
             val crateText = input.substringBefore("\n\n")
@@ -37,8 +25,6 @@ class Day05 {
                 }
             }
 
-            println(crateStacks)
-
             procedure.forEach { command ->
                 // move X from Y to Z
                 val words = command.words()
@@ -49,9 +35,6 @@ class Day05 {
                 repeat(count) {
                     crateStacks[cTo].push(crateStacks[cFrom].pop())
                 }
-
-                println(command)
-                println(crateStacks)
             }
 
             return crateStacks.joinToString("") { it.peek().toString() }
@@ -75,8 +58,6 @@ class Day05 {
                 }
             }
 
-            println(crateStacks)
-
             procedure.forEach { command ->
                 // move X from Y to Z
                 val words = command.words()
@@ -91,9 +72,6 @@ class Day05 {
                 repeat(count) {
                     crateStacks[cTo].push(tempStack.pop())
                 }
-
-                println(command)
-                println(crateStacks)
             }
 
             return crateStacks.joinToString("") { it.peek().toString() }
