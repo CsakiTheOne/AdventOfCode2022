@@ -85,4 +85,18 @@ class Solutions {
         answer(ans)
         assert(ans == 3037)
     }
+
+    @Test
+    fun day07test() {
+        val ans = Day07.part1(IO.getInputLines(7))
+        answer(ans)
+        assert(ans == 1348005)
+    }
+
+    @Test
+    fun day07test2() {
+        val ans = Day07.part2(IO.getInputLines(7))
+        answer(ans)
+        assert(ans == 12785886)
+    }
 }

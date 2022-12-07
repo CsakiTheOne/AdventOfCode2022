@@ -1,8 +1,8 @@
 fun answer(solution: Any) {
     val solutionText = solution.toString()
-    println("🎄${"-".repeat(solutionText.length + 2)}🎄")
-    println("|  $solutionText  |")
-    println("✨${"-".repeat(solutionText.length + 2)}✨")
+    println("*${"-".repeat(solutionText.length + 2)}*")
+    println("| $solutionText |")
+    println("*${"-".repeat(solutionText.length + 2)}*")
 }
 
 fun String.columns(): List<String> {
