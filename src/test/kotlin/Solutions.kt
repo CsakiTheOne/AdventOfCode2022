@@ -71,4 +71,18 @@ class Solutions {
         answer(ans)
         assert(ans == "BQDNWJPVJ")
     }
+
+    @Test
+    fun day06test() {
+        val ans = Day06.part1(IO.getInputText(6))
+        answer(ans)
+        assert(ans == 1238)
+    }
+
+    @Test
+    fun day06test2() {
+        val ans = Day06.part2(IO.getInputText(6))
+        answer(ans)
+        assert(ans == 3037)
+    }
 }
